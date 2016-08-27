@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <script src="libs/js/ionic.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/css/ionic.min.css">
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/services.js"></script>
+    <style>
+        .content img{
+            max-width:80%;
+            display: block;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<ion-side-menus>
+
+    <ion-side-menu-content>
+
+        <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons>
+                <button class="button button-clear" menu-toggle="left">
+                    <i class="icon ion-navicon-round"></i>
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+
+        <ion-nav-view></ion-nav-view>
+
+    </ion-side-menu-content>
+
+    <!-- 左侧菜单 -->
+    <ion-side-menu side="left">
+        <ion-list>
+            <ion-item>
+                <i class="ion-heart  positive"></i>  我的收藏
+            </ion-item>
+            <ion-item>
+                <i class="ion-email  positive"></i>  我的信箱
+            </ion-item>
+            <ion-item>
+                <i class="ion-chatbubble-working  positive"></i>  留  言
+            </ion-item>
+            <ion-item>
+                <i class="ion-card  positive"></i>  我的银行卡
+            </ion-item>
+            <ion-item>
+                <i class="ion-power  positive"></i>  关  闭
+            </ion-item>
+        </ion-list>
+    </ion-side-menu>
+
+</ion-side-menus>
+
+
+</body>
+</html>

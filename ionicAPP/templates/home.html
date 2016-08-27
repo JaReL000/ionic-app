@@ -1,0 +1,52 @@
+
+<ion-view title="新闻首页">
+
+
+    <ion-content>
+
+        <div ng-if="hasLoading" style="margin-top:60px; text-align: center">
+            <ion-spinner icon="ios" style="height: 60px; width: 60px;"></ion-spinner>
+        </div>
+
+        <ion-slide-box  style="width: 100%; height: 180px;">
+            <ion-slide slide-interval="true">
+                <img src="images/0eai5xeworajrolx.jpg" alt="" style="width: 100% ;height:
+                    100%;">
+            </ion-slide>
+
+            <ion-slide slide-interval="true">
+                <img src="images/8xafnrull62jxqcv.jpg" alt="" style="width: 100% ;height:
+                    100%;">
+            </ion-slide>
+
+            <ion-slide slide-interval="true">
+                <img src="images/74cwaouzocui4tyh.jpg" alt="" style="width: 100% ;height:
+                    100%;">
+            </ion-slide>
+
+            <ion-slide slide-interval="true">
+                <img src="images/1nfpeosntpdmnmre.jpg" alt="" style="width: 100% ;height:
+                    100%;">
+            </ion-slide>
+
+            <ion-slide slide-interval="true">
+                <img src="images/ofsu97zx4aafk01a.jpg" alt="" style="width: 100% ;height:
+                    100%;">
+            </ion-slide>
+
+            <ion-slide slide-interval="true">
+                <img src="images/udmvk8t1j84th8kb.jpg" alt="" style="width: 100% ;height:
+                    100%;">
+            </ion-slide>
+        </ion-slide-box>
+
+        <ion-list ng-if="!hasLoading">
+            <ion-item href="#/tab/home_article/{{ item.aid }}" ng-repeat="item in items" class="item-thumbnail-left">
+                <img  src="http://www.phonegap100.com/data/attachment/{{ item.pic }}" alt="">
+                {{ item.title }}
+            </ion-item>
+        </ion-list>
+
+        <ion-infinite-scroll ng-if="hasData()" on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

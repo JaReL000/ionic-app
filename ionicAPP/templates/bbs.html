@@ -1,0 +1,23 @@
+<ion-view title="论坛">
+    <ion-content>
+
+        <div ng-if="hasLoading" style="margin-top:60px; text-align: center">
+            <ion-spinner icon="ios" style="height: 60px; width: 60px;"></ion-spinner>
+        </div>
+
+        <ion-list ng-if="!hasLoading">
+            <ion-item href="#/tab/bbs_article/{{ item.tid }}" ng-repeat="item in items">
+                {{ item.subject }}
+                <br/>
+                <span style="color: #007aff; font-size: 14px; display: inline-block; margin-top: 20px;">
+                    <i class="ion-ios-person positive" style="font-size: 20px; margin-right: 10px;"></i>
+                    <span>{{ item.author }}</span>
+                </span>
+            </ion-item>
+        </ion-list>
+
+        <ion-infinite-scroll ng-if="hasData()" on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
+
+
+    </ion-content>
+</ion-view>
